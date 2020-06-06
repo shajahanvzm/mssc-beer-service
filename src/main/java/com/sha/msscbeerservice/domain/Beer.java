@@ -1,6 +1,7 @@
 package com.sha.msscbeerservice.domain;
 
 import com.sha.msscbeerservice.web.modal.BeerStyleEnum;
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -25,6 +26,7 @@ public class Beer {
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(length = 36, columnDefinition = "varchar",updatable = false,nullable = false)
     private UUID id;
+
     private String beerName;
     private String beerStyle;
 
